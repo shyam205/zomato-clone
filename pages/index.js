@@ -75,7 +75,7 @@ export default function Home() {
               {
                 zomatofeatures && zomatofeatures.map((feature,i) => (
                   <div className={styles.zomatofeatureboxes} key={i}>
-                    <img src={feature.image} alt={feature.description} />
+                    <Image src={feature.image} alt={feature.description} layout="fill" />
                       <div className={styles.zomatofeaturetext}>
                           <p className={styles.zomatofeaturetitle}>{feature.title}</p>
                           <span className={styles.zomatofeaturedescription}>{feature.description}</span>
