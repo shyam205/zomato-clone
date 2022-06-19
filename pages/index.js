@@ -2,8 +2,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import { zomatofeatures } from '../data.js'
+import { zomatofeatures, collectionyourlocation } from '../data.js'
+import { useState } from 'react'
 export default function Home() {
+    const [locationbox,setLocationbox] = useState(false);
+
+    const focusHandler = () => {
+       setLocationbox(true);
+    }
+    const blurlocaionbox = () => {
+      setLocationbox(false);
+    }
   return (
     <div className={styles.container}>
       <Head>
@@ -39,8 +48,8 @@ export default function Home() {
                    </nav>
                  </div>
              </div>
-             <div className={styles.bannermidtag}>
-             <div className={styles.bannerlogo}>
+            <div className={styles.bannermidtag}>
+             <div className={styles.bannermiddlecontainer}>
               {/* <Image src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" layout="fill" objectFit='contain' alt="bannerlogo" /> */}
               <h1 className={styles.zomatotag}>ZOMATO</h1>
               <p className={styles.discovertag}>Discover the best food & drinks in </p>
@@ -48,7 +57,7 @@ export default function Home() {
                   <div className={styles.zomatoloactioncontainer}>
                       <div className={styles.zomatoloaction}>
                           <svg xmlns="http://www.w3.org/2000/svg" className={styles.location} fill="#FF7E8B" width="20" height="20" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"><title>location-fill</title><path d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"></path></svg>
-                          <input type="text" placeholder="Location" />
+                          <input type="text" placeholder="Location" className={styles.inputlocation} onFocus={focusHandler} onBlur={blurlocaionbox} />
                           <svg xmlns="http://www.w3.org/2000/svg" fill="#4F4F4F" width="12" height="12" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"><title>down-triangle</title><path d="M20 5.42l-10 10-10-10h20z"></path></svg>
                       </div>
                       <div className={styles.zomatosearchcontainer}> 
@@ -59,10 +68,23 @@ export default function Home() {
                         </div>
                       </div>
                   </div>
-                  <div className={styles.zomatosearch}>
-                    
-                  </div>
+                  
+                  {   locationbox && 
+                   <div className={styles.zomatosearchoption}>
+                   <div className={styles.zomatosearchoptionconainer}>
+                       <div className={styles.zomatosearchoptionicon}>
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="#EF4F5F" width="14" height="14" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"><title>current-location</title><path d="M13.58 10c0 1.977-1.603 3.58-3.58 3.58s-3.58-1.603-3.58-3.58c0-1.977 1.603-3.58 3.58-3.58v0c1.977 0 3.58 1.603 3.58 3.58v0zM20 9.52v0.96c0 0.265-0.215 0.48-0.48 0.48v0h-1.72c-0.447 3.584-3.256 6.393-6.802 6.836l-0.038 0.004v1.72c0 0.265-0.215 0.48-0.48 0.48v0h-0.96c-0.265 0-0.48-0.215-0.48-0.48v0-1.72c-3.575-0.455-6.375-3.262-6.816-6.802l-0.004-0.038h-1.74c-0.265 0-0.48-0.215-0.48-0.48v0-0.96c0-0.265 0.215-0.48 0.48-0.48v0h1.74c0.445-3.578 3.245-6.385 6.781-6.836l0.039-0.004v-1.72c0-0.265 0.215-0.48 0.48-0.48v0h0.96c0.265 0 0.48 0.215 0.48 0.48v0 1.72c3.584 0.447 6.393 3.256 6.836 6.802l0.004 0.038h1.72c0.265 0 0.48 0.215 0.48 0.48v0zM15.96 10c0-3.292-2.668-5.96-5.96-5.96s-5.96 2.668-5.96 5.96c0 3.292 2.668 5.96 5.96 5.96v0c3.292 0 5.96-2.668 5.96-5.96v0z"></path></svg>
+                       </div>
+                       <div className={styles.zomatosearchoptiontext}>
+                            <p className={styles.zomatodetactlocation}>Detect current location</p>
+                            <p className={styles.zomatgpstag}>Using GPS</p>
+                       </div>
+                   </div>
+                 </div>
+              }
               </div>
+              
+             
              </div>
          </div>
          </div>
@@ -89,9 +111,49 @@ export default function Home() {
 
        {/* collection start */}
        <div className={styles.collection}>
-
+           <div className={styles.collectioncontainer}>
+               <div className={styles.collectiontext}>
+                    <div className={styles.collectiontextleft}>
+                      <h2 className={styles.collectionheader}>Collections</h2>
+                      <div className={styles.collectionsecondtext}>
+                            <p className={styles.collectiondescription}>Explore curated lists of top restaurants, cafes, pubs, and bars in Kolkata, based on trends</p>
+                            <Link href="#" >
+                              <div>
+                              <span className={styles.collectionplaces}>All collections in Kolkata</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="#FF7E8B" width="12" height="12" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"><title>right-triangle</title><path d="M5 0.42l10 10-10 10v-20z"></path></svg>
+                              </div>  
+                            </Link>
+                      </div>
+                    </div>
+               </div>
+               <div className={styles.collectionimages}>
+                   {
+                    collectionyourlocation && collectionyourlocation.map((item,i) => (
+                      <div className={styles.collectionimagesbox} key={i}>
+                          <Image src={item.image} alt={item.description} layout="fill" />
+                          <div className={styles.collectionimagestext}>
+                             <p className={styles.collectionimagestextdesc}>{item.description}</p>
+                             <div className={styles.collectionimagestextdescplace}>
+                                <h6 className={styles.collectionimagestextplaces}>{item.places}<p className={styles.collectionplace}>Places</p></h6>
+                                <span>
+                                   <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="10" height="10" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"><title>right-triangle</title><path d="M5 0.42l10 10-10 10v-20z"></path></svg>
+                                </span>
+                             </div>
+                          </div>
+                      </div>
+                    ))
+                   }
+               </div>
+           </div>
        </div>
        {/* collection end */}
+
+       {/* popular locality start */}
+         <div className={styles.popularlocality}>
+
+         </div>
+
+       {/* popular locality end */}
 
       <footer className={styles.footer}>
       </footer>

@@ -9,6 +9,7 @@
   justify-content: space-around;
   align-items: center;
   height: 5.2rem;
+  
 }
 .apptext{
   display: inline-block;
@@ -28,11 +29,15 @@
   font-weight: 300;
   color: rgb(255, 255, 255);
 }
+.bannermiddlecontainer{
+  position: relative;
+}
 .zomatotag{
-  font-size: 4rem;
+    font-size: 4rem;
     color: white;
     text-align: center;
     margin: 0;
+    font-family: 'Helvetica 35 Thin', sans-serif;
 }
 .discovertag{
   color: white;
@@ -113,6 +118,9 @@
   border-radius: 1.2rem;
   border: 1px solid rgb(232, 232, 232);
 }
+.zomatofeatureboxes:hover{
+  transform: scale(1.05);
+}
 .zomatofeatureboxes img{
   height: 100%;
   width: 100%;
@@ -144,6 +152,136 @@
 }
 .collection{
   margin-top: 100px;
+}
+.zomatosearchoption{
+  width:max-content;
+  width: 23rem;
+  margin-top: 10px;
+  position: absolute;
+  z-index: 55;
+}
+.zomatosearchoptionconainer{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 0.8rem;
+  border: 1px solid rgb(207, 207, 207);
+  box-shadow: rgb(28 28 28 / 8%) 0px 2px 8px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(232 232 232) 0px -0.5px 0px inset;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.zomatosearchoptiontext p{
+  margin: 0 0 0 15px;
+}
+.zomatodetactlocation{
+    line-height: 1.5;
+    margin: 0px;
+    color: rgb(239, 79, 95);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.zomatgpstag{
+    font-size: 0.9rem;
+    color: rgb(156, 156, 156);
+}
+.collection{
+  width: 100%;
+}
+.collectioncontainer{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.collectionheader{
+    font-size: 2rem;
+    line-height: 1.2;
+    color: rgb(28, 28, 28);
+    font-weight: 500;
+    margin: 0;
+}
+.collectionsecondtext{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.collectiondescription{
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 300;
+    color: rgb(54, 54, 54);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+.collectionplaces{
+  display: inline-block;
+  font-weight: 400;
+  color: rgb(255, 126, 139);
+  font-size: 1.05rem;
+  margin-right: 10px;
+}
+.collectionimages{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+.collectionimagesbox{
+  width:265px;
+  height:350px;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  position: relative;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+}
+.collectionimagesbox span{
+  position:  relative !important;
+  width:270px !important ;
+  height:350px !important;
+  overflow: hidden;
+}
+.collectionimagesbox span img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.collectionimagestext{
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  height: 4rem;
+  padding: 20px;
+}
+.collectionimagestextdesc{
+  margin: 0;
+  color: white;
+  font-size: 1.3rem;
+}
+.collectionimagestextdescplace{
+  display: flex;
+  align-items: baseline;
+}
+.collectionimagestextplaces{
+  margin: 5px 0 0 0;
+  color:white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: baseline;
+  font-weight: 600;
+}
+.collectionimagestextplaces p{
+  margin: 0 0 0 5px;
+
+}
+.collectionimagestextdescplace span{
+  display: inline-block;
+  margin-left: 5px;
+}
+.popularlocality{
+  margin-top: 60px;
 }
 @media (max-width: 600px) {
   .grid {
