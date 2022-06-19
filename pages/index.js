@@ -50,8 +50,8 @@ export default function Home() {
              </div>
             <div className={styles.bannermidtag}>
              <div className={styles.bannermiddlecontainer}>
-              {/* <Image src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" layout="fill" objectFit='contain' alt="bannerlogo" /> */}
-              <h1 className={styles.zomatotag}>ZOMATO</h1>
+              <Image src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" height="100px" width="250px" objectFit='contain' alt="bannerlogo" />
+              {/* <h1 className={styles.zomatotag}>ZOMATO</h1> */}
               <p className={styles.discovertag}>Discover the best food & drinks in </p>
               <div className={styles.zomatoloactionsearch}>
                   <div className={styles.zomatoloactioncontainer}>

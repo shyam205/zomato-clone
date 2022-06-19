@@ -31,13 +31,17 @@
 }
 .bannermiddlecontainer{
   position: relative;
+  text-align: center;
 }
 .zomatotag{
     font-size: 4rem;
     color: white;
     text-align: center;
     margin: 0;
-    font-family: 'Helvetica 35 Thin', sans-serif;
+}
+.bannermiddlecontainer span{
+  height: 100px !important;
+    width: 300px !important;
 }
 .discovertag{
   color: white;
@@ -45,6 +49,7 @@
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
+    font-family: 'Helvetica', sans-serif;
 }
 .zomatoloactionsearch{
     margin: 30px auto 0 auto;
