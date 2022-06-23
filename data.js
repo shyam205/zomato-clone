@@ -39,3 +39,38 @@ export const collectionyourlocation = [
         places:"30"
     }
 ]
+
+export const popularlocality = [
+    {
+        "title":"Park Street Area",
+        "places":"223"
+    },
+    {
+        "title":"Sector 5, salt Lake",
+        "places":"478"
+    },
+    {
+        "title":"Sector 1, Salt Lake",
+        "places":"349"
+    },
+    {
+        "title":"Ballygunge",
+        "places":"317"
+    },
+    {
+        "title":"Southern Avenue",
+        "places":"155"
+    },
+    {
+        "title":"New Town",
+        "places":"1532"
+    },
+    {
+        "title":"Camac Street Area",
+        "places":"86"
+    },
+    {
+        "title":"Chinar Park",
+        "places":"550"
+    }
+]

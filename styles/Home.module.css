@@ -189,6 +189,7 @@
 .zomatgpstag{
     font-size: 0.9rem;
     color: rgb(156, 156, 156);
+    text-align: left;
 }
 .collection{
   width: 100%;
@@ -286,7 +287,136 @@
   margin-left: 5px;
 }
 .popularlocality{
-  margin-top: 60px;
+  margin-top: 100px;
+}
+.popularlocalitycontainer{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.popularlocalitymainheader{
+  font-weight: 400;
+  color: rgb(28, 28, 28);
+}
+.popularlocalityboxes{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  box-sizing: border-box;
+}
+.popularlocalitybox{
+    width:32%;
+    box-shadow: rgb(28 28 28 / 8%) 0px 1.42623px;
+    border-radius: 0.8rem;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(232, 232, 232);
+    padding: 15px;
+    margin: 10px 10px 0 0;
+}
+.popularlocalityheader, .popularlocalityplaces{
+  margin: 0;
+}
+.popularlocalityheader{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgb(28, 28, 28);
+}
+.popularlocalityplaces{
+  font-weight: 300;
+  margin-top: 5px;
+}
+.zomatoapp{
+  margin-top: 100px;
+  background-color: rgb(255, 251, 247);
+  padding: 80px 0 50px 0;
+}
+.zomatoappcontainer{
+  display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.zomatoappimagebox{
+  height:30rem;
+  width:25rem;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+.zomatoapptextbox h2{
+  color: rgb(28, 28, 28);
+    margin:0rem;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 5.6rem;
+}
+.zomatoapptextbox p{
+  font-size: 1.15rem;
+  margin: 0px 0px 1.5rem;
+  color: rgb(54, 54, 54);
+  width: 100%;
+  line-height: 2.5rem;
+}
+.zomatoappimagebox img{
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+   object-position: center;
+}
+.radiobutton{
+  display: flex;
+  /* justify-content: center; */
+}
+.labelemail, .labelphone{
+  position: relative;
+}
+.labelphone{
+  margin-left: 15px;
+}
+.labelemail svg, .labelphone svg{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 3px;
+    top:1px
+}
+.radiobuttonselect{
+  height: 20px;
+    width: 20px;
+}
+.isemail{
+  display: none;
+}
+.labelemail span, .labelphone span{
+  display: inline-block;
+  margin-left: 10px;
+}
+.emailphonebox{
+  margin-top: 35px;
+}
+.emailphoneboxinput{
+  height:3rem;
+  width: 17rem;
+  outline: none;
+  border:none;
+  margin-right: 30px;
+  padding-left: 20px;
+  border-radius: 6px;
+}
+.emailphoneboxinput::placeholder{
+  margin-left: 30px;
+  display: inline-block;
+}
+.shareapplink{
+  background: border-box rgb(239, 79, 95);
+  border-color: rgb(239, 79, 95);
+  outline: none;
+  padding: 15px 20px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 1.1rem;
 }
 @media (max-width: 600px) {
   .grid {
