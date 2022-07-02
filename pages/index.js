@@ -215,6 +215,11 @@ export default function Home() {
                                 }
                                  <button type="submit" className={styles.shareapplink}>Share App Link</button>
                              </form>
+                             <span className={styles.downloadapp}>Download app from</span>
+                             <div className={styles.downloadappbox}>
+                              <div className={styles.downloadappimage}><Image src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" width={150} height={40} layout="responsive" alt="downloadapp" /></div>
+                              <div className={styles.downloadappimage}><Image src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" width={150} height={40} layout="responsive" alt="downloadapp" /></div>
+                             </div>
                          </div>
                      </div>
                  </div>
