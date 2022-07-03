@@ -15,6 +15,7 @@
   display: inline-block;
   margin-left: 8px;
   color: white;
+  cursor: pointer;
 }
 .nav{
   display: flex;
@@ -439,6 +440,36 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+
+/* mobile section */
+  .mobilesection{
+    display: flex;
+  }
+  .mobilesection li{
+    list-style-type: none;
+  }
+  .mobilelog a{
+    font-weight: 300;
+    color: black;
+    cursor: pointer;
+  }
+  .mobilesection a{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: right;
+    font-weight: 300;
+    color: rgb(105, 105, 105);
+  }
+   .mobilesignin{
+    margin-left: 15px;
+   }
+  .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/* mobile section */
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
